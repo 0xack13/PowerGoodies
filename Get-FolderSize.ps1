@@ -13,9 +13,9 @@ Function Get-FolderSize
 
     $size = $folder.size
 
-    [PSCustomObject]@{'Name' = $path;'Size (GB)' = ($size / 1gb) 
+    [PSCustomObject]@{'Name' = $path;'Size (MB)' = ($size / 1mb);'Size (GB)' = ($size / 1gb) 
     } 
    }
  }
 
- Get-ChildItem D:\DevCode\0xack13 | Get-FolderSize
+ Get-ChildItem D:\DevCode\ | Get-FolderSize
